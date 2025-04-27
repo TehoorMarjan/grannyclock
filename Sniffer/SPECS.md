@@ -23,7 +23,7 @@ committed to a file on the SD Card.
 
 ## Breadboard
 
-![Breadboard Schematics (Fritzing)](data/Sniffer_bb.png)
+![Breadboard Schematics (Fritzing)](circuit/Sniffer_bb.png)
 
 ## Requirements
 
