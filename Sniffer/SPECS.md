@@ -11,15 +11,19 @@ committed to a file on the SD Card.
 
 - ESP32: (See connections below)
 - Clock:
-  - RF: _IN_ ESP32-GPIO25
-  - MU: _IN_ ESP32-GPIO26
-  - BR: _IN_ ESP32-GPIO27
-  - BA: _IN_ ESP32-GPIO14
+  - RF: _IN_ ESP32-GPIO36 (DCF77 signal)
+  - MU: _IN_ ESP32-GPIO39 (MUsic signal)
+  - BR: _IN_ ESP32-GPIO34 (BR signal)
+  - BA: _IN_ ESP32-GPIO35 (BA signal)
 - SD Card reader:
-  - CS: _OUT_ ESP32-GPIO5
+  - CS: _OUT_ ESP32-GPIO17
   - MOSI: _OUT_ ESP32-GPIO23
   - CLK: _OUT_ ESP32-GPIO18
   - MISO: _IN_ ESP32-GPIO19
+- RGB LED:
+  - Red: _OUT_ ESP32-GPIO32
+  - Green: _OUT_ ESP32-GPIO33
+  - Blue: _OUT_ ESP32-GPIO25
 
 ## Breadboard
 
