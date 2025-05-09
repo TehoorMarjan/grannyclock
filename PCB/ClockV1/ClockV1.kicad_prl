@@ -110,7 +110,9 @@
     "sort_ascending": true,
     "sorting_column": 0
   },
-  "open_jobsets": [],
+  "open_jobsets": [
+    "ClockV1.kicad_jobset"
+  ],
   "project": {
     "files": []
   },

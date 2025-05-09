@@ -3738,16 +3738,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "MF" "DFRobot"
+			(property "Description" "Dfplayer - a Mini Mp3 Player"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3757,7 +3748,7 @@
 					(hide yes)
 				)
 			)
-			(property "DESCRIPTION" "Dfplayer - a Mini Mp3 Player"
+			(property "MF" "DFRobot"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4750,7 +4741,7 @@
 	(text_box "Mounting Holes"
 		(exclude_from_sim no)
 		(at 176.53 148.59 0)
-		(size 55.88 15.24)
+		(size 106.68 15.24)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -7714,7 +7705,7 @@
 			(fill
 				(type none)
 			)
-			(uuid 29a75889-bc52-449b-9f7d-82c7360468e1)
+			(uuid 5ba0e7f1-ad2f-4aaa-aaf0-5ea482adf744)
 		)
 	)
 	(rule_area
@@ -7729,7 +7720,22 @@
 			(fill
 				(type none)
 			)
-			(uuid 3ab7638d-8238-4626-aca5-65e492ff01e2)
+			(uuid 7afe4b67-635c-40f4-8897-4dcfb9fe40f8)
+		)
+	)
+	(rule_area
+		(polyline
+			(pts
+				(xy 106.68 124.46) (xy 106.68 135.89) (xy 124.46 135.89) (xy 124.46 128.27) (xy 120.65 124.46)
+			)
+			(stroke
+				(width 0)
+				(type dash)
+			)
+			(fill
+				(type none)
+			)
+			(uuid a7baf588-ea4a-42e9-a8ef-5b07e243d151)
 		)
 	)
 	(rule_area
@@ -7745,22 +7751,7 @@
 			(fill
 				(type none)
 			)
-			(uuid 6ec0b3ae-1d5c-4a9d-8bb8-cf1b83637f45)
-		)
-	)
-	(rule_area
-		(polyline
-			(pts
-				(xy 106.68 124.46) (xy 106.68 135.89) (xy 124.46 135.89) (xy 124.46 128.27) (xy 120.65 124.46)
-			)
-			(stroke
-				(width 0)
-				(type dash)
-			)
-			(fill
-				(type none)
-			)
-			(uuid d0688f14-0129-4ede-adf9-c5e9a121a3c9)
+			(uuid d238afa8-86f8-4d4c-a257-9b59abda0add)
 		)
 	)
 	(netclass_flag ""
@@ -7967,7 +7958,7 @@
 				)
 			)
 		)
-		(property "Value" "BAT43"
+		(property "Value" "LBAT46T1G"
 			(at 208.5975 140.97 0)
 			(effects
 				(font
@@ -8244,7 +8235,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "DMP2045UQ-7"
+		(property "Value" "AO3407A"
 			(at 157.48 41.9101 0)
 			(effects
 				(font
@@ -8253,7 +8244,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Samacsys:SOT96P240X110-3N"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
 			(at 156.21 41.91 0)
 			(effects
 				(font
@@ -8290,7 +8281,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Name" "Diodes Incorporated"
+		(property "Manufacturer_Name" "ElecSuper"
 			(at 162.56 -459.36 0)
 			(effects
 				(font
@@ -8300,7 +8291,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer_Part_Number" "DMP2045UQ-7"
+		(property "Manufacturer_Part_Number" "AO3407A"
 			(at 162.56 -559.36 0)
 			(effects
 				(font
@@ -8310,7 +8301,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser Part Number" "621-DMP2045UQ-7"
+		(property "Mouser Part Number" ""
 			(at 162.56 -659.36 0)
 			(effects
 				(font
@@ -8320,7 +8311,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DMP2045UQ-7?qs=OTrKUuiFdkaAbKwFvdfO1g%3D%3D"
+		(property "Mouser Price/Stock" ""
 			(at 162.56 -759.36 0)
 			(effects
 				(font
@@ -8330,7 +8321,7 @@
 				(hide yes)
 			)
 		)
-		(property "Arrow Part Number" "DMP2045UQ-7"
+		(property "Arrow Part Number" ""
 			(at 162.56 -859.36 0)
 			(effects
 				(font
@@ -8340,7 +8331,7 @@
 				(hide yes)
 			)
 		)
-		(property "Arrow Price/Stock" "https://www.arrow.com/en/products/dmp2045uq-7/diodes-incorporated?utm_currency=USD&region=asia"
+		(property "Arrow Price/Stock" ""
 			(at 162.56 -959.36 0)
 			(effects
 				(font
@@ -8380,6 +8371,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Part #" "C5224209"
+			(at 151.13 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fc685326-1e07-4c05-8a77-1010bc651ae9")
 		)
@@ -8403,7 +8403,7 @@
 		(at 119.38 50.8 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "24fe1b5c-6ee7-463d-8c8d-13f600aa9633")
@@ -8951,7 +8951,7 @@
 		(at 204.47 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -9279,6 +9279,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 238.76 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "51f08064-4e6e-4b30-8e3a-4fc0d4a9b544")
+		(property "Reference" "H5"
+			(at 241.3 153.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 241.3 156.2099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:ToolingHole_1.152mm"
+			(at 238.76 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 238.76 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 238.76 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/84b610d8-b306-480e-b01f-bcfbfa1832ac"
+					(reference "H5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Jumper:Jumper_3_Open")
 		(at 212.09 26.67 0)
 		(unit 1)
@@ -9490,7 +9554,7 @@
 		(at 269.24 59.69 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -9557,25 +9621,26 @@
 		(at 261.62 95.25 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "75f5b74e-d322-4aea-a44f-becb9820c8d6")
 		(property "Reference" "D3"
-			(at 269.24 96.8375 0)
+			(at 267.716 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "LED"
-			(at 266.7 96.8375 0)
+		(property "Value" "Red"
+			(at 265.43 94.742 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
@@ -9624,6 +9689,70 @@
 			(project ""
 				(path "/84b610d8-b306-480e-b01f-bcfbfa1832ac"
 					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 264.16 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "77c64ff2-6056-48ae-a4a9-ca6022105ec5")
+		(property "Reference" "H7"
+			(at 266.7 153.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 266.7 156.2099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:ToolingHole_1.152mm"
+			(at 264.16 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 264.16 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 264.16 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/84b610d8-b306-480e-b01f-bcfbfa1832ac"
+					(reference "H7")
 					(unit 1)
 				)
 			)
@@ -9764,7 +9893,7 @@
 		(at 138.43 118.11 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -10035,6 +10164,24 @@
 			)
 		)
 		(property "Description" "Inductor"
+			(at 54.61 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER_PART_NUMBER" "SDRH.1209CT.NLF220MT00"
+			(at 54.61 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Part #" "C5123081"
 			(at 54.61 30.48 0)
 			(effects
 				(font
@@ -10413,7 +10560,7 @@
 				)
 			)
 		)
-		(property "Value" "MAX14611ETD_"
+		(property "Value" "MAX14611ETD+T"
 			(at 233.68 28.702 0)
 			(effects
 				(font
@@ -10548,6 +10695,14 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Part #" "C2677488"
+			(at 219.71 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "61c4fcf6-fc53-4f07-b4bd-131ac0640b49")
 		)
@@ -10672,7 +10827,7 @@
 		(at 251.46 95.25 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -10685,7 +10840,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "Green"
 			(at 256.54 96.8375 0)
 			(effects
 				(font
@@ -10749,7 +10904,7 @@
 		(at 116.84 179.07 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "9f9a2d9f-9551-4111-b10d-4517659b5d5e")
@@ -11019,7 +11174,7 @@
 		(at 157.48 176.53 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11089,7 +11244,7 @@
 		(at 269.24 36.83 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11170,7 +11325,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "442k"
+		(property "Value" "330k"
 			(at 76.2 53.3399 0)
 			(effects
 				(font
@@ -11294,7 +11449,7 @@
 		(at 269.24 31.75 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11627,7 +11782,7 @@
 		(at 204.47 97.79 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11694,7 +11849,7 @@
 		(at 34.29 177.8 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11897,7 +12052,7 @@
 		(at 269.24 64.77 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -12168,7 +12323,7 @@
 		(at 111.76 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -12225,6 +12380,70 @@
 			(project ""
 				(path "/84b610d8-b306-480e-b01f-bcfbfa1832ac"
 					(reference "TP6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 238.76 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f0523d5c-2655-458a-9dc4-5d127dabe08f")
+		(property "Reference" "H6"
+			(at 241.3 158.7499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 241.3 161.2899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:ToolingHole_1.152mm"
+			(at 238.76 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 238.76 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 238.76 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/84b610d8-b306-480e-b01f-bcfbfa1832ac"
+					(reference "H6")
 					(unit 1)
 				)
 			)
@@ -12367,7 +12586,7 @@
 		(at 72.39 177.8 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)

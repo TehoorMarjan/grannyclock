@@ -1,0 +1,125 @@
+{
+  "jobs": [
+    {
+      "description": "",
+      "id": "a3d854b7-8ac1-4e71-b2e7-2eafb75d3b39",
+      "settings": {
+        "black_and_white": false,
+        "color_theme": "KiCad Classique",
+        "description": "",
+        "drawing_sheet": "",
+        "format": "pdf",
+        "hpgl_page_size": "default",
+        "hpgl_pen_size": 1.016,
+        "hpgl_plot_origin": "A3",
+        "min_pen_width": 847,
+        "output_dir": "schematics",
+        "page_size": "auto",
+        "pdf_hierarchical_links": true,
+        "pdf_metadata": true,
+        "pdf_property_popups": true,
+        "plot_all": true,
+        "plot_drawing_sheet": true,
+        "use_background_color": true
+      },
+      "type": "sch_export_plot_pdf"
+    },
+    {
+      "description": "",
+      "id": "f3bcaf2b-88d9-4921-a9ef-1e4109850715",
+      "settings": {
+        "board_only": false,
+        "board_outlines_chaining_epsilon": 0.01,
+        "cut_vias_in_body": false,
+        "description": "",
+        "export_board_body": true,
+        "export_components": true,
+        "export_inner_copper": false,
+        "export_pads": false,
+        "export_silkscreen": false,
+        "export_soldermask": false,
+        "export_tracks": false,
+        "export_zones": false,
+        "fill_all_vias": false,
+        "format": "step",
+        "fuse_shapes": false,
+        "include_dnp": true,
+        "include_unspecified": true,
+        "occt_format": 0,
+        "optimize_step": true,
+        "output_filename": "${PROJECTNAME}.step",
+        "overwrite": true,
+        "subst_models": true,
+        "use_drill_origin": false,
+        "use_grid_origin": true,
+        "user_origin.x": 0.0,
+        "user_origin.y": 0.0,
+        "vrml_model_dir": "",
+        "vrml_relative_paths": false
+      },
+      "type": "pcb_export_3d"
+    },
+    {
+      "description": "",
+      "id": "5cede39b-27fa-4b66-91f4-085898001bfa",
+      "settings": {
+        "bg_style": "transparent",
+        "description": "",
+        "floor": false,
+        "format": "png",
+        "height": 1080,
+        "light_bottom_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "light_camera_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "light_side_elevation": 60,
+        "light_side_intensity": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "light_top_intensity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "output_filename": "${PROJECTNAME}_3D.png",
+        "pan_x": 0.0,
+        "pan_y": 1.5,
+        "pan_z": -2.0,
+        "perspective": true,
+        "pivot_x": 0.0,
+        "pivot_y": 0.0,
+        "pivot_z": 0.0,
+        "quality": "basic",
+        "rotation_x": -41.0,
+        "rotation_y": 3.8,
+        "rotation_z": -38.7,
+        "side": "top",
+        "width": 1920,
+        "zoom": 1.1
+      },
+      "type": "pcb_render"
+    }
+  ],
+  "meta": {
+    "version": 1
+  },
+  "outputs": [
+    {
+      "description": "",
+      "id": "f7d5da63-cdd5-4fad-ad76-736c319fb6a4",
+      "only": [],
+      "settings": {
+        "output_path": "output/"
+      },
+      "type": "folder"
+    }
+  ]
+}
