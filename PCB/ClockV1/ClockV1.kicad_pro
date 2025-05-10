@@ -81,19 +81,31 @@
       "drc_exclusions": [
         [
           "clearance|31125000|43300000|bde25f12-3063-424f-a645-c52c6985da1c|c3d7c553-aa93-4966-aa1c-1a2bbb9f5262",
-          "OK, Component is dimensionned for this"
+          ""
         ],
         [
           "lib_footprint_mismatch|64610000|50263500|3b65168d-8ec4-4090-97b4-cdbc8d611a17|00000000-0000-0000-0000-000000000000",
           "OK"
         ],
         [
-          "starved_thermal|50500000|37500000|d9985a71-3c85-4dd7-be0c-d440afc8003d|81e5876e-a064-410e-b3e7-5104697d76e4|F.Cu",
-          "OK, low constraints here"
+          "starved_thermal|58975000|47975000|d9985a71-3c85-4dd7-be0c-d440afc8003d|762ba88b-5ef4-4166-904b-22208b1a397c|F.Cu",
+          ""
         ],
         [
-          "text_thickness|34000000|44400000|75591d6e-f967-4099-84f7-94e418a9090c|00000000-0000-0000-0000-000000000000",
-          "Let's see what they really say"
+          "starved_thermal|58975000|49175000|d9985a71-3c85-4dd7-be0c-d440afc8003d|50410111-387a-4818-a8a3-c2223d3dfc45|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|60175000|47975000|d9985a71-3c85-4dd7-be0c-d440afc8003d|d56a6cda-37d8-4604-aea3-7c5d981dc35e|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|60175000|49175000|d9985a71-3c85-4dd7-be0c-d440afc8003d|14740aa0-aa64-4582-a0d7-e4fb81fb6f16|F.Cu",
+          ""
+        ],
+        [
+          "text_thickness|34500000|44750000|75591d6e-f967-4099-84f7-94e418a9090c|00000000-0000-0000-0000-000000000000",
+          "OK"
         ]
       ],
       "meta": {
