@@ -36,7 +36,7 @@
         "export_components": true,
         "export_inner_copper": false,
         "export_pads": false,
-        "export_silkscreen": false,
+        "export_silkscreen": true,
         "export_soldermask": false,
         "export_tracks": false,
         "export_zones": false,

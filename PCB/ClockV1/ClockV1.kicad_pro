@@ -84,8 +84,20 @@
           ""
         ],
         [
+          "lib_footprint_mismatch|29500000|39500000|413cbbad-0385-4788-a220-864e7a78e6ae|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|55000000|63000000|bb8ac3a2-90db-4450-b0bb-5e10abaff05d|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
           "lib_footprint_mismatch|64610000|50263500|3b65168d-8ec4-4090-97b4-cdbc8d611a17|00000000-0000-0000-0000-000000000000",
           "OK"
+        ],
+        [
+          "lib_footprint_mismatch|73000000|44000000|8a81c447-94a8-4346-a6c5-18d1f3b86725|00000000-0000-0000-0000-000000000000",
+          ""
         ],
         [
           "starved_thermal|58975000|47975000|d9985a71-3c85-4dd7-be0c-d440afc8003d|762ba88b-5ef4-4166-904b-22208b1a397c|F.Cu",
@@ -290,6 +302,10 @@
   },
   "erc": {
     "erc_exclusions": [
+      [
+        "lib_symbol_mismatch|1384300|1181100|80ba4072-7dac-4500-9225-fbac9dc00057|00000000-0000-0000-0000-000000000000|||",
+        "On purpose, modified Component Exclusion Zone"
+      ],
       [
         "lib_symbol_mismatch|685800|304800|d718a949-6d09-4996-b4a5-e5e497303034|00000000-0000-0000-0000-000000000000|||",
         "Using default symbol instead of SnapEDA"
@@ -926,7 +942,7 @@
       ],
       "filter_string": "",
       "group_symbols": true,
-      "include_excluded_from_bom": false,
+      "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": false,
       "sort_field": "${EXCLUDE_FROM_BOM}"
