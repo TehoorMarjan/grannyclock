@@ -88,31 +88,19 @@
           ""
         ],
         [
-          "lib_footprint_mismatch|55000000|63000000|bb8ac3a2-90db-4450-b0bb-5e10abaff05d|00000000-0000-0000-0000-000000000000",
+          "lib_footprint_mismatch|38000000|63000000|bb8ac3a2-90db-4450-b0bb-5e10abaff05d|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "lib_footprint_mismatch|64610000|50263500|3b65168d-8ec4-4090-97b4-cdbc8d611a17|00000000-0000-0000-0000-000000000000",
-          "OK"
+          "lib_footprint_mismatch|58500000|62800000|ee679523-56da-4b2f-9e47-8f3c217a85d6|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|64610000|49981000|3b65168d-8ec4-4090-97b4-cdbc8d611a17|00000000-0000-0000-0000-000000000000",
+          ""
         ],
         [
           "lib_footprint_mismatch|73000000|44000000|8a81c447-94a8-4346-a6c5-18d1f3b86725|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "starved_thermal|58975000|47975000|d9985a71-3c85-4dd7-be0c-d440afc8003d|762ba88b-5ef4-4166-904b-22208b1a397c|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|58975000|49175000|d9985a71-3c85-4dd7-be0c-d440afc8003d|50410111-387a-4818-a8a3-c2223d3dfc45|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|60175000|47975000|d9985a71-3c85-4dd7-be0c-d440afc8003d|d56a6cda-37d8-4604-aea3-7c5d981dc35e|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|60175000|49175000|d9985a71-3c85-4dd7-be0c-d440afc8003d|14740aa0-aa64-4582-a0d7-e4fb81fb6f16|F.Cu",
           ""
         ],
         [
@@ -192,7 +180,7 @@
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.25,
         "min_microvia_drill": 0.15,
-        "min_resolved_spokes": 2,
+        "min_resolved_spokes": 1,
         "min_silk_clearance": 0.15,
         "min_text_height": 1.0,
         "min_text_thickness": 0.1,
