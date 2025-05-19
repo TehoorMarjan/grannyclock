@@ -1,0 +1,46 @@
+Dimension,Value (mm)
+Box Width,56
+Box Length,56
+Box Height,19.3
+Axle X,23.2
+Axle Y,22.9
+Axle Diameter,7.7
+Filet Side,3
+Thickness,1.5
+Hole Pocket Diameter,3
+Hole Diameter,2
+Hole Position Depth,4
+Top Hole X,5.6
+Left Hole Y,20
+Top Thickness,4.5
+Slot Length,4
+Slot Width,33
+Slot Filet,1.5
+Plastic Washer Thickness,0.5
+Platic Washer Diameter,14
+Hole Support Thickness,2.7
+Battery Slot Position,40
+Battery Slot Cut,2.5
+Box Filet,1
+Box Filet Small,0.5
+PCB Thickness,1.2
+Axle Length,9
+Axle Hole Diameter,5.7
+Axle Hour Diameter,5
+Axle Hour Extrusion,12
+Axle Minute Diameter,4.2
+Axle Minute Extrusion,2.5
+Hour Hand Width,4
+Hour Hand Length,72
+Hour Hand Hole Position,56
+Minute Hand Width,3
+Minute Hand Length,92
+Minute Hand Hole Position,76
+HM Hand Circle Diameter,10
+Second Hand Width,2
+Second Hand Length,113
+Second Hand Hole Position,83
+Second Hand Circle Diameter,7
+Hand Thickness,0.4
+Second Hand Pivot Length,4.5
+Second Hand Pivot Diameter,1.6
