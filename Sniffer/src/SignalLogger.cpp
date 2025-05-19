@@ -12,57 +12,25 @@ void SignalLogger::begin() {
     // Set up pins for input
     pinMode(Pins::sigRF, INPUT_PULLUP);
     pinMode(Pins::sigMU, INPUT_PULLUP);
-    pinMode(Pins::sigBR, INPUT_PULLUP);
+    pinMode(Pins::sigPON, INPUT_PULLUP);
     pinMode(Pins::sigBA, INPUT_PULLUP);
     
     // Initialize last pin states
     lastPinState[RF_SIGNAL] = digitalRead(Pins::sigRF);
     lastPinState[MU_SIGNAL] = digitalRead(Pins::sigMU);
-    lastPinState[BR_SIGNAL] = digitalRead(Pins::sigBR);
+    lastPinState[PON_SIGNAL] = digitalRead(Pins::sigPON);
     lastPinState[BA_SIGNAL] = digitalRead(Pins::sigBA);
     
-    // Set up ISR for MU, BR, BA (always active)
+    // Set up interrupts for all signals (always active)
+    setupInterrupts();
+}
+
+void SignalLogger::setupInterrupts() {
+    // Set up interrupts for all signals
+    enableInterrupt(Pins::sigRF);
     enableInterrupt(Pins::sigMU);
-    enableInterrupt(Pins::sigBR);
+    enableInterrupt(Pins::sigPON);
     enableInterrupt(Pins::sigBA);
-    
-    // RF starts in inactive state, will be enabled by updateRFLogging
-    disableInterrupt(Pins::sigRF);
-    
-    // Initialize timing for RF cycle
-    rfActive = false;
-    rfStateChangeTime = millis() + Timing::RF_INACTIVE_PERIOD;
-}
-
-void SignalLogger::updateRFLogging() {
-    unsigned long currentTime = millis();
-    
-    // Check if it's time to change RF logging state
-    if (currentTime >= rfStateChangeTime) {
-        if (rfActive) {
-            // Active -> Inactive
-            disableInterrupt(Pins::sigRF);
-            rfActive = false;
-            rfStateChangeTime = currentTime + Timing::RF_INACTIVE_PERIOD;
-        } else {
-            // Inactive -> Active
-            enableInterrupt(Pins::sigRF);
-            rfActive = true;
-            rfStateChangeTime = currentTime + Timing::RF_ACTIVE_PERIOD;
-        }
-    }
-}
-
-bool SignalLogger::isRFActive() const {
-    return rfActive;
-}
-
-unsigned long SignalLogger::timeUntilRFStateChange() const {
-    unsigned long currentTime = millis();
-    if (currentTime >= rfStateChangeTime) {
-        return 0;
-    }
-    return rfStateChangeTime - currentTime;
 }
 
 void SignalLogger::enableInterrupt(uint8_t pin) {
@@ -70,7 +38,7 @@ void SignalLogger::enableInterrupt(uint8_t pin) {
     attachInterrupt(digitalPinToInterrupt(pin), 
         pin == Pins::sigRF ? handleRF : 
         pin == Pins::sigMU ? handleMU :
-        pin == Pins::sigBR ? handleBR : 
+        pin == Pins::sigPON ? handlePON : 
         handleBA, CHANGE);
 }
 
@@ -90,9 +58,9 @@ void IRAM_ATTR SignalLogger::handleMU() {
     }
 }
 
-void IRAM_ATTR SignalLogger::handleBR() {
+void IRAM_ATTR SignalLogger::handlePON() {
     if (instance) {
-        instance->processInterrupt(BR_SIGNAL, digitalRead(Pins::sigBR) ? EDGE_RISING : EDGE_FALLING);
+        instance->processInterrupt(PON_SIGNAL, digitalRead(Pins::sigPON) ? EDGE_RISING : EDGE_FALLING);
     }
 }
 

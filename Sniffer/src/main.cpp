@@ -45,14 +45,10 @@ void loop() {
   // Update status indicator
   statusIndicator.update();
   
-  // Update RF logging state based on timing
-  signalLogger.updateRFLogging();
-  
-  // Only try to write to SD card if we're not in RF active mode and enough time has passed
+  // Try to write to SD card if enough time has passed
   unsigned long currentTime = millis();
-  if (!signalLogger.isRFActive() && 
-      (currentTime - lastSDWriteTime >= Timing::SD_COMMIT_INTERVAL || 
-       currentTime < lastSDWriteTime)) { // Handle millis overflow
+  if (currentTime - lastSDWriteTime >= Timing::SD_COMMIT_INTERVAL || 
+      currentTime < lastSDWriteTime) { // Handle millis overflow
     
     // Try to save events to SD card
     if (!eventBuffer.isEmpty()) {
@@ -78,7 +74,7 @@ void loop() {
   
   // Check if buffer is getting full (at 90% capacity)
   if (eventBuffer.getCount() >= (BufferConfig::BUFFER_SIZE * 0.9)) {
-    // If SD card is present, try emergency write even if RF logging is active
+    // If SD card is present, try emergency write
     if (sdManager.isCardPresent()) {
       Serial.println("Emergency buffer flush");
       sdManager.saveEvents();

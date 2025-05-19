@@ -8,7 +8,7 @@ namespace Pins {
     // Clock signals
     constexpr uint8_t sigRF = 36; // Radio Frequency signal
     constexpr uint8_t sigMU = 39; // Minute Unit signal
-    constexpr uint8_t sigBR = 34; // BR signal
+    constexpr uint8_t sigPON = 34; // Power ON signal
     constexpr uint8_t sigBA = 35; // BA signal
 
     // SD Card
@@ -27,7 +27,7 @@ namespace Pins {
 enum SignalType : uint8_t {
     RF_SIGNAL = 0,
     MU_SIGNAL = 1,
-    BR_SIGNAL = 2,
+    PON_SIGNAL = 2,
     BA_SIGNAL = 3
 };
 
@@ -39,7 +39,7 @@ enum EdgeType : uint8_t {
 
 // Event entry structure (8 bytes total)
 struct EventEntry {
-    uint8_t signalType;  // RF, MU, BR, BA
+    uint8_t signalType;  // RF, MU, PON, BA
     uint8_t edgeType;    // RISING or FALLING
     uint16_t reserved;   // For future use and alignment
     uint32_t timestamp;  // millis() value
@@ -47,11 +47,6 @@ struct EventEntry {
 
 // Timing constants
 namespace Timing {
-    // RF signal timing (in milliseconds)
-    constexpr unsigned long RF_ACTIVE_PERIOD = 5 * 60 * 1000UL;      // 5 minutes
-    constexpr unsigned long RF_INACTIVE_PERIOD = 25 * 60 * 1000UL;   // 25 minutes 
-    constexpr unsigned long RF_CYCLE_PERIOD = RF_ACTIVE_PERIOD + RF_INACTIVE_PERIOD; // 30 minutes total
-
     // SD Card commit interval
     constexpr unsigned long SD_COMMIT_INTERVAL = 60 * 1000UL; // 1 minute
 }
@@ -81,7 +76,7 @@ inline const char* signalTypeToString(SignalType type) {
     switch (type) {
         case RF_SIGNAL: return "RF";
         case MU_SIGNAL: return "MU";
-        case BR_SIGNAL: return "BR";
+        case PON_SIGNAL: return "PON";
         case BA_SIGNAL: return "BA";
         default: return "UN"; // Unknown
     }

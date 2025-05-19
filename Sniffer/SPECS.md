@@ -13,7 +13,7 @@ committed to a file on the SD Card.
 - Clock:
   - RF: _IN_ ESP32-GPIO36 (DCF77 signal)
   - MU: _IN_ ESP32-GPIO39 (MUsic signal)
-  - BR: _IN_ ESP32-GPIO34 (BR signal)
+  - PON: _IN_ ESP32-GPIO34 (Power ON signal)
   - BA: _IN_ ESP32-GPIO35 (BA signal)
 - SD Card reader:
   - CS: _OUT_ ESP32-GPIO17
@@ -31,18 +31,16 @@ committed to a file on the SD Card.
 
 ## Requirements
 
-- RF, MU, BR, BA shall trigger logging at each rising edge (0->1) and falling edge (1->0).
-- MU, BR, BA logging shall be active all the time
-- To reduce data, RF logging shall only be active for 5 minutes every 30 minutes
+- RF, MU, PON, BA shall trigger logging at each rising edge (0->1) and falling edge (1->0).
+- RF, MU, PON, BA logging shall be active all the time
 - Logging shall happen into a ring buffer with writing and reading head
 - Each logging entry shall contain:
-  - Triggering signal (RF/MU/BR/BA)
+  - Triggering signal (RF/MU/PON/BA)
   - Rising or Falling event
   - The value of `millis()` when event happened (or at latest when event is treated)
 - SD Card might be inserted/removed during operation (to collect data). This shall not impact logging to memory
 - Every so often, content of memory shall be offloaded to SD Card:
   - Attempted every minute
-  - Disabled during collection of RF signal
   - Aborted if ring buffer is empty (no data since last commit, reading head = writing head)
   - Aborted if SD Card is not present
   - Append data to the logging file
@@ -79,16 +77,15 @@ committed to a file on the SD Card.
    - Record signal type, edge direction, and timestamp in each interrupt
    - Use the mutex-protected ring buffer to store events
 
-4. **RF Signal Timing Control**
+4. **Signal Logging**
 
-   - Implement a timer system to enable RF logging for 5 minutes every 30 minutes
-   - Add logic to enable/disable the RF pin interrupts based on this schedule
+   - Set up interrupt handlers for all signals (RF, MU, PON, BA)
+   - Ensure all signals are logged continuously without special timing windows
 
 5. **SD Card Data Management**
 
    - Create functions to initialize the SD card and check its presence
    - Implement a periodic task (every minute) to flush data to the SD card
-   - Add logic to skip SD writing during RF signal collection periods
    - Implement CSV file creation with appropriate headers when needed
    - Handle appending new data to existing files
 
@@ -109,10 +106,10 @@ committed to a file on the SD Card.
 
 ## Data Flow Calculations
 
-- RF: 1 pulse (2 events) per second max = 600 events during 5-min logging phase = 1200 events/hour
+- RF: 1 pulse (2 events) per second max when active = up to 7200 events/hour when continuously active
 - MU: 2-8 events every 15 minutes = ~40 events/hour
-- BR and BA: Maximum of 40 events each per 15 minutes = ~160 events/hour each
-- Total: ~1560 events/hour
+- PON and BA: Maximum of 40 events each per 15 minutes = ~160 events/hour each
+- Total: Up to ~7560 events/hour during peak activity
 
 Memory requirements:
 
@@ -137,7 +134,7 @@ Memory requirements:
 
    - Signal detection and interrupt handling
    - Interrupt Service Routine registration
-   - RF timing control (5min every 30min)
+   - Continuous monitoring of all signals
 
 4. **include/SDCardManager.h & src/SDCardManager.cpp**
 
@@ -161,7 +158,7 @@ The core data structure for this project:
 
 ```cpp
 struct EventEntry {
-  uint8_t signalType;  // RF, MU, BR, BA
+  uint8_t signalType;  // RF, MU, PON, BA
   uint8_t edgeType;    // RISING or FALLING
   uint16_t reserved;   // Later use and alignment
   uint32_t timestamp;  // millis() value

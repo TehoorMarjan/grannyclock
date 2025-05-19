@@ -15,7 +15,7 @@ from vcd.common import VarType
 WIRES: list[str] = [
     "RF",
     "BA",
-    "BR",
+    "PON",
     "MU",
 ]
 
@@ -47,10 +47,18 @@ def convert(csvin: Path, vcdout: Path) -> None:
 
 @click.command()
 @click.argument("csvin", type=click.Path(exists=True, dir_okay=False))
-@click.argument("vcdout", type=click.Path(dir_okay=False))
-def main(csvin: str, vcdout: str) -> None:
+@click.argument(
+    "vcdout", type=click.Path(dir_okay=False), default=None, required=False
+)
+def main(csvin: str, vcdout: str | None) -> None:
     """Convert a CSV file to VCD format."""
-    convert(Path(csvin), Path(vcdout))
+    pcsvin = Path(csvin)
+    if vcdout is None:
+        pvcdout = pcsvin.with_suffix(".vcd")
+    else:
+        pvcdout = Path(vcdout)
+    convert(pcsvin, pvcdout)
+
 
 if __name__ == "__main__":
     main()

@@ -21,7 +21,7 @@ The Clock Sniffer uses an ESP32 microcontroller to monitor digital signals from 
 | ------ | ---------------------- | --------- |
 | RF     | Radio Frequency signal | GPIO 36   |
 | MU     | Minute Unit signal     | GPIO 39   |
-| BR     | BR signal              | GPIO 34   |
+| PON    | Power ON signal        | GPIO 34   |
 | BA     | BA signal              | GPIO 35   |
 
 ### SD Card Connections
@@ -47,6 +47,28 @@ See the Fritzing diagram in the `circuit` folder: [Fritzing Source File](circuit
 
 ![Breadboard Layout](circuit/Sniffer_bb.png)
 
+### Voltage Level Adaptation
+
+The clock module operates at a lower voltage level (1.5V) than the ESP32 (3.3V), which creates a challenge for signal level conversion:
+
+- **Voltage Threshold Issue**: ESP32 GPIO inputs have a TTL minimum high level voltage of 2.0V, while the clock signals peak at only 1.5V.
+
+- **MOSFET Limitations**: Many MOSFETs require at least 2.0V on $V_{th}$ (threshold source-grid) to switch properly, making them unsuitable for this application.
+
+- **Recommended Approach**: The latest version of this project uses a **LM339N comparator** with a 1.0V reference voltage to reliably detect the clock's 1.5V signals.
+
+- **Alternative Components**: Other level shifters could be used but many suitable options (like the MX14611) are not widely available.
+
+#### Important Operation Note
+
+When the clock module is not powered:
+
+- The inputs of the LM339N become unstabilized
+- This can generate numerous false edges on the ESP32 inputs
+- In extreme cases, this may trigger an "Emergency buffer flush" as the buffer fills with noise
+
+**Recommendation**: Do not leave the ESP32 recording for extended periods when the clock module is unpowered. While this situation is electrically safe, it will create data files filled with meaningless signal transitions.
+
 ## Firmware Features
 
 The firmware is built around efficient event capturing and reliable storage:
@@ -57,10 +79,10 @@ The firmware is built around efficient event capturing and reliable storage:
   - Uses interrupts for precise timing measurements
   - Records timestamps using ESP32's `millis()` function
 
-- **Signal Timing Control:**
+- **Signal Monitoring:**
 
-  - RF signal monitoring is active for 5 minutes every 30 minutes (to reduce data volume)
-  - MU, BR, and BA signals are continuously monitored
+  - All signals (RF, MU, PON, and BA) are continuously monitored
+  - Records both rising and falling edges for all inputs
 
 - **Memory-Efficient Data Buffering:**
 
@@ -139,7 +161,7 @@ The analysis revealed the following about the [TFA Dostmann 60.3518.01][tfa] clo
    - Both MU and BA fall at the same time
    - The entire frame lasts 64ms
 
-### Examples of Decoded Time Values:
+### Examples of Decoded Time Values
 
 | Time  | Binary Code |
 | ----- | ----------- |

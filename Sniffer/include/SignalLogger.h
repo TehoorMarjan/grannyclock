@@ -18,27 +18,12 @@ public:
     void begin();
     
     /**
-     * Update RF signal logging state based on timing
-     * Call this regularly in the main loop
+     * Initialize all signal monitoring
      */
-    void updateRFLogging();
-    
-    /**
-     * Check if RF logging is currently active
-     * @return true if RF logging is active
-     */
-    bool isRFActive() const;
-    
-    /**
-     * Get time until RF logging state changes (in ms)
-     * @return time until next state change
-     */
-    unsigned long timeUntilRFStateChange() const;
+    void setupInterrupts();
 
 private:
     RingBuffer& eventBuffer;
-    bool rfActive = false;
-    unsigned long rfStateChangeTime = 0;
     
     // Signal validation variables
     static const uint8_t NUM_SIGNALS = 4;
@@ -49,7 +34,7 @@ private:
     // ISR handlers for each pin and edge
     static void IRAM_ATTR handleRF();
     static void IRAM_ATTR handleMU();
-    static void IRAM_ATTR handleBR();
+    static void IRAM_ATTR handlePON();
     static void IRAM_ATTR handleBA();
     
     // Enable or disable interrupts for a specific pin
