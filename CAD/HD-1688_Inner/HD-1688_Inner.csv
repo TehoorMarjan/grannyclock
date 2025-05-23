@@ -1,0 +1,50 @@
+Dimension,Value (mm)
+Box Length,53
+Box Width,32.16
+Box Height,11.78
+Notch Length,3.18
+Notch Width,2.78
+Pin Diameter,1.8
+Pin Height,1.96
+Side Filet,1
+Pin X Distance,3
+Pin Y Distance,7.9
+Pin1 X,50
+Pin1 Y,7.9
+Pin2 X,3
+Pin2 Y,7.9
+Pin3 X,3
+Pin3 Y,24.26
+Pin Chamfer,0.5
+Screw Diameter,1.7
+Screw Length,5
+Hole1 X,50.6
+Hole1 Y,25.6
+Hole2 X,42
+Hole2 Y,2
+Hole3 X,3
+Hole3 Y,28
+Coil Y,2.6
+Coil1 X,4.3
+Coil2 X,44.6
+Coil Pin Dim,0.8
+Coil Pin Sep,4.7
+Holding Plate Width,19
+Holding Plate Length,24
+Holding Plate Y,21
+Holding Plate Filet,1
+Cell Slot Length,3.3
+Cell Slot Width,3.5
+Cell Slot Height,0.6
+Cell Slot Hole Diameter,2.5
+Cell Slot Hole Depth,1
+Cell Slit Length,1
+Cell Slit Width,2.5
+Cell Slot Pin Thickness,1
+Cell Slot Thickness,0.7
+Cell Pins Height,1.5
+Hole Bottom,4.32
+Hole Diameter,7
+Pin Hole Y,11.4
+Pin Hole X,10
+Pin Hole Diameter,1
