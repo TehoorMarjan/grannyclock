@@ -133,6 +133,9 @@ Sniffer/
 The project includes Python scripts for analyzing the captured signals:
 
 - **csv2vcd.py**: Converts CSV log files to Value Change Dump (VCD) format for visualization in tools like [GTKWave][gtkwave] or [PulseView][sigrok]
+  - Automatically splits output into multiple files when timestamp resets are detected
+  - Handles ESP32 resets or timestamp overflow cases
+  - Naming convention: output.vcd, output_1.vcd, output_2.vcd, etc.
 - **Analysis.ipynb**: Jupyter notebook with signal analysis and protocol decoding
 
 ### Protocol Discovery
@@ -191,6 +194,12 @@ The analysis revealed the following about the [TFA Dostmann 60.3518.01][tfa] clo
 3. **Analyzing data:**
    - Copy the CSV files to the `_data` directory
    - Convert to VCD format using `csv2vcd.py`
+
+      ```bash
+      python scripts/csv2vcd.py _data/yourfile.csv
+      ```
+
+   - If the source CSV contains timestamp resets (from ESP32 resets or timestamp overflow), multiple output files will be generated automatically (e.g., output.vcd, output_1.vcd, output_2.vcd)
    - Run the Jupyter notebook `Analysis.ipynb` to process the data
 
 ## Important Disclaimer
