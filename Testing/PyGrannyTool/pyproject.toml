@@ -1,0 +1,22 @@
+[project]
+name = "PyGrannyTool"
+version = "0.1.0"
+description = "Set of tools for GrannyClock"
+authors = [
+    {name = "Tehoor Marjan", email = "tehoor.marjan@gmail.com"},
+]
+dependencies = ["click>=8.2.1", "rich>=14.0.0", "pyserial>=3.5"]
+requires-python = ">=3.13"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.scripts]
+pygrannytool = "pygrannytool.cli:cli"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true

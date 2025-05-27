@@ -17,6 +17,7 @@ These mini-projects were essential for solving critical technical challenges and
 | [ATtiny1616Boilerplate](#attiny1616boilerplate) | Test project for programming ATtiny1616 via UPDI | ATtiny1616, UPDI                |
 | [DRV8833DFPlayer](#drv8833dfplayer)             | Solenoid driver testing for clock mechanism      | DRV8833, ESP32, Solenoids       |
 | [Sniffer](#sniffer)                             | Protocol analyzer for TFA Dostmann clock modules | ESP32, Signal Analysis, HD-1866 |
+| [PyGrannyTool](#pygrannytool)                   | Collection of testing tools                      | Python, Neo-6M                  |
 
 ## ATtiny1616Boilerplate
 
@@ -60,5 +61,16 @@ A hardware and software solution for capturing and analyzing the signal protocol
 - Level shifting for 1.5V clock signals using LM339N comparators
 - Real-time monitoring of multiple clock module signals
 - Python-based analysis tools for decoding captured data
+
+[Full Documentation →](Sniffer/README.md)
+
+## PyGrannyTool
+
+A testing tool written in Python to do different tests and prototypings while advancing in the project.
+
+**Key Features:**
+
+- Test retrieving time and date from Neo-6M module using USB serial
+- 🚧 More to come
 
 [Full Documentation →](Sniffer/README.md)
